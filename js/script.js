@@ -16,5 +16,4 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 })
-script.js
-Displaying script.js.
+
