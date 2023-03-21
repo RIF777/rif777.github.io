@@ -129,59 +129,10 @@ a:hover {
 
 @media (max-width: 576px){
     .menu {
-        position: fixed;
-        flex-direction: column;
-        top: 0;
-        right: 100%;
-        width: 70%;
-        height: 100vh;
-        padding: 20px 15px;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0,0,0, .7);
-        transition: 0.8s all;
+       display:none;
     }
-    .menu_link {
-        color: #01f329;
-        font-size: 20px;
-
-           
-    }
-    .menu_item {
-        margin-top: 20px;
-    }
-    .menu_active {
-        left: 0;
+   
     }
 
        
-    .hamburger{
-        display: block;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 30px;
-        height: 12px;
-    }
-    .hamburger span {
-        display: block;
-        height: 2px;
-        width: 100%;
-        background-color: #e2dff0;
-        margin-bottom: 2px;
-        transition: 0.5s all;
-
-    }
-    .hamburger_active span:nth-child(1) {
-        margin-bottom: -2px;
-        transform: rotate(-45deg);
-    }
-    .hamburger_active span:nth-child(2) {
-        display: none;
-    }
-    .hamburger_active span:nth-child(3) {
-        margin-bottom: -2px;
-        transform: rotate(45deg);
-    }
-}
+    
