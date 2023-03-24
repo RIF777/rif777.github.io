@@ -145,7 +145,15 @@ a:hover {
     height: 50px;
     }
 
-  
+    .promo_foto img {
+    
+        height: 200px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+
+    }
+    
 @media (max-width: 576px){
     
     .menu {
@@ -163,5 +171,13 @@ a:hover {
 }
 .nav_logo {
     display: block;
+}
+.promo_foto img {
+    
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
 }
 }
