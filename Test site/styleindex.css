@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    
+    
+ 
+}
+ 
+#quiz-list {
+    list-style-type: none; /* Entfernt die Standard-Bullet Points */
+    padding: 0; /* Entfernt eventuelle Einrückungen */
+}
+
+/* Überschrift */
+h1 {
+    
+}
+
+/* Text */
+p {
+    color: black;
+}
+
