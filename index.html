@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deutsch Quiz</title>
-    <link rel="stylesheet" href="/Test site/styleindex.css">
+    <link rel="stylesheet" href="styleindex.css">
 </head>
 <body>
     <h1>Willkommen beim Deutsch-Quiz</h1> 
@@ -12,17 +12,26 @@
     <ul id="quiz-list"></ul>
 
     <script>
+        const quizTitles = {
+            1: "Farben",
+            2: "Grammatik",
+            3: "Obst und Gemüse"
+            // bis 100
+        };
+    
         const totalQuizzes = 100;
         let quizList = document.getElementById("quiz-list");
-
+    
         for (let i = 1; i <= totalQuizzes; i++) {
             let listItem = document.createElement("li");
             let link = document.createElement("a");
             link.href = `quiz-template.html?quiz=${i}`;
-            link.textContent = `Quiz ${i}`;
+            link.textContent = quizTitles[i] || "Unbenannt";
             listItem.appendChild(link);
             quizList.appendChild(listItem);
         }
     </script>
+    
+    
 </body>
 </html>
