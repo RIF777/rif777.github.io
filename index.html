@@ -1,37 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deutsch Quiz</title>
-    <link rel="stylesheet" href="styleindex.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3ec">
+  <meta name="description" content="Рецепты от Ляны — Rezepte von Lyana. Eine zweisprachige kulinarische Website.">
+  <title>Рецепты от Ляны! | Rezepte von Lyana</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Willkommen beim Deutsch-Quiz</h1> 
-    <p>Wähle ein Quiz:</p> 
-    <ul id="quiz-list"></ul>
+  <header class="site-header" id="start">
+    <a class="brand" href="#start" aria-label="Рецепты от Ляны — Startseite">
+      <span class="brand-mark" aria-hidden="true">✿</span>
+      <span class="brand-copy">
+      <strong data-i18n="brand">Rezepte von Lyana</strong>
+        <small data-i18n="tagline">Mit Liebe gekocht</small>
+      </span>
+    </a>
 
-    <script>
-        const quizTitles = {
-            1: "Farben",
-            2: "Grammatik",
-            3: "Obst und Gemüse"
-            // bis 100
-        };
-    
-        const totalQuizzes = 100;
-        let quizList = document.getElementById("quiz-list");
-    
-        for (let i = 1; i <= totalQuizzes; i++) {
-            let listItem = document.createElement("li");
-            let link = document.createElement("a");
-            link.href = `quiz-template.html?quiz=${i}`;
-            link.textContent = quizTitles[i] || "Unbenannt";
-            listItem.appendChild(link);
-            quizList.appendChild(listItem);
-        }
-    </script>
-    
-    
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="#start" data-i18n="navHome">Startseite</a>
+      <a href="#first-courses" data-i18n="navFirst">Erste Gerichte</a>
+      <a href="#main-courses" data-i18n="navMain">Hauptgerichte</a>
+      <a href="#salads" data-i18n="navSalads">Salate</a>
+      <a href="#baking" data-i18n="navBaking">Gebäck</a>
+      <a href="#about" data-i18n="navAbout">Über mich</a>
+    </nav>
+
+    <div class="language-switch" role="group" aria-label="Sprache / Язык">
+      <button type="button" class="language-button is-active" data-language="de" aria-pressed="true">DE</button>
+      <button type="button" class="language-button" data-language="ru" aria-pressed="false">RU</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-decoration" aria-hidden="true">✦</div>
+      <p class="eyebrow" data-i18n="welcome">Willkommen in meiner Küche</p>
+      <h1 id="hero-title" data-i18n="heroTitle">Rezepte von Lyana</h1>
+      <p class="hero-text" data-i18n="heroText">Lieblingsgerichte, gesammelt an einem Ort.</p>
+      <a class="hero-button" href="#categories" data-i18n="browse">Kategorien ansehen</a>
+    </section>
+
+    <section class="categories section-wrap" id="categories" aria-labelledby="categories-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="collection">Die Rezeptsammlung</p>
+        <h2 id="categories-title" data-i18n="categoriesTitle">Was möchten wir kochen?</h2>
+        <p data-i18n="categoriesIntro">Wähle einen Bereich. Neue Rezepte kommen später dazu.</p>
+      </div>
+
+      <div class="category-grid">
+        <a class="category-card card-soup" id="first-courses" href="#first-courses">
+          <span class="card-icon" aria-hidden="true">♨</span>
+          <span class="card-number">01</span>
+          <span class="card-title" data-i18n="navFirst">Erste Gerichte</span>
+          <span class="card-note" data-i18n="comingSoon">Rezepte folgen</span>
+        </a>
+        <a class="category-card card-main" id="main-courses" href="#main-courses">
+          <span class="card-icon" aria-hidden="true">✿</span>
+          <span class="card-number">02</span>
+          <span class="card-title" data-i18n="navMain">Hauptgerichte</span>
+          <span class="card-note" data-i18n="comingSoon">Rezepte folgen</span>
+        </a>
+        <a class="category-card card-salad" id="salads" href="#salads">
+          <span class="card-icon" aria-hidden="true">❋</span>
+          <span class="card-number">03</span>
+          <span class="card-title" data-i18n="navSalads">Salate</span>
+          <span class="card-note" data-i18n="comingSoon">Rezepte folgen</span>
+        </a>
+        <a class="category-card card-baking" id="baking" href="#baking">
+          <span class="card-icon" aria-hidden="true">⌂</span>
+          <span class="card-number">04</span>
+          <span class="card-title" data-i18n="navBaking">Gebäck</span>
+          <span class="card-note" data-i18n="comingSoon">Rezepte folgen</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="note-band">
+      <span aria-hidden="true">♡</span>
+      <p data-i18n="note">Hier entsteht Lyana’s persönliche Rezeptsammlung.</p>
+      <span aria-hidden="true">♡</span>
+    </section>
+
+    <section class="about section-wrap" id="about" aria-labelledby="about-title">
+      <div class="about-photo" role="img" aria-label="Platzhalter für ein Foto von Lyana">
+        <span aria-hidden="true">L</span>
+        <small data-i18n="photoPlaceholder">Foto von Lyana</small>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow" data-i18n="aboutEyebrow">Die Gastgeberin</p>
+        <h2 id="about-title" data-i18n="aboutTitle">Über mich</h2>
+        <p data-i18n="aboutText">Hier erzählt Lyana ihre Geschichte und stellt sich als Gastgeberin dieser Website vor.</p>
+        <p class="about-hint" data-i18n="aboutHint">Foto und persönliche Geschichte werden hier ergänzt.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-brand" data-i18n="brand">Rezepte von Lyana</p>
+    <nav class="social-links" aria-label="Social Media">
+      <a class="social-link" data-social="youtube" href="#" aria-label="YouTube" aria-disabled="true"><span aria-hidden="true">▶</span><small>YouTube</small></a>
+      <a class="social-link" data-social="instagram" href="#" aria-label="Instagram" aria-disabled="true"><span aria-hidden="true">◎</span><small>Instagram</small></a>
+      <a class="social-link" data-social="ok" href="#" aria-label="OK.ru" aria-disabled="true"><span aria-hidden="true">OK</span><small>OK.ru</small></a>
+      <a class="social-link" data-social="facebook" href="#" aria-label="Facebook" aria-disabled="true"><span aria-hidden="true">f</span><small>Facebook</small></a>
+    </nav>
+    <p class="copyright">© 2006–2026 Rifkat Valiyev</p>
+  </footer>
 </body>
 </html>
